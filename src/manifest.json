@@ -1,0 +1,29 @@
+{
+  "name": "Custom Context Menu",
+  "description": "Custom context menus with categories and shortcuts",
+  "version": "0.1.0",
+  "manifest_version": 3,
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "runAt": "document_ready",
+      "css": ["style.css"],
+      "js": ["./thirdparty/jquery-3.6.4.min.js","main.js"]
+    }
+  ],
+  "options_page": "settings.html",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "contextMenus"
+  ]
+}

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#custom-menu {
+    position: fixed;
+    z-index: 99999999;
+    width: 200px;
+    background: #fbf9f9;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 11px 28px 0px rgba(140,140,140,0.68);
+    box-shadow: 0px 11px 28px 0px rgba(140,140,140,0.68);
+    color: #232323;
+    /*display: none;
+    */
+    top: 30px;
+    left: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+
+#custom-menu .visible {
+    display: block!important;
+}
+
+#custom-menu .header {
+    all: revert;
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding: 1px 2px !important;
+}
+
+#custom-menu .header .add-button {
+    all: revert;
+    font-weight: bold !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 50% !important;
+    color: #a4a4a4 !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+}
+
+
+#custom-menu .menu-item:hover {
+    background: #e8e8e8;
+    cursor: pointer;
+}
